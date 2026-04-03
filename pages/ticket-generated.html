@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Votre ticket - Nexto">
+    <title>Votre Ticket - Nexto</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="../index.html" class="logo">
+                    <div class="logo-icon">∴</div>
+                    <span>Nexto</span>
+                </a>
+                <nav>
+                    <a href="../index.html">Accueil</a>
+                    <a href="waiting-list.html">File d'Attente</a>
+                    <a href="display.html">Affichage Public</a>
+                    <a href="admin.html" class="btn btn-primary btn-sm">Admin</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Ticket Généré</h1>
+                    <p>Votre ticket est prêt, suivez les instructions ci-dessous</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ticket Display -->
+        <section>
+            <div class="ticket-display">
+                <!-- Status -->
+                <div style="margin-bottom: var(--spacing-2xl);">
+                    <div style="font-size: 2rem; color: var(--success);">✓</div>
+                    <p class="text-sm uppercase" style="color: var(--success); font-weight: 700;">Ticket Généré</p>
+                </div>
+
+                <hr style="border: none; border-top: 2px solid var(--border); margin: var(--spacing-lg) 0;">
+
+                <!-- Ticket Number -->
+                <p class="ticket-display-label">Votre Numéro</p>
+                <div class="ticket-display-number" id="ticket-number">A042</div>
+
+                <hr style="border: none; border-top: 2px solid var(--border); margin: var(--spacing-lg) 0;">
+
+                <!-- Details -->
+                <div style="text-align: left; margin: var(--spacing-lg) 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-md);">
+                        <span class="text-secondary">Service:</span>
+                        <span class="font-bold" id="service-name">—</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span class="text-secondary">Heure d'Émission:</span>
+                        <span class="font-bold" id="emission-time">—</span>
+                    </div>
+                </div>
+
+                <hr style="border: none; border-top: 2px solid var(--border); margin: var(--spacing-lg) 0;">
+
+                <!-- Wait Message -->
+                <p style="margin: var(--spacing-lg) 0; color: var(--primary);">⏭️ Veuillez attendre votre tour</p>
+
+                <hr style="border: none; border-top: 2px solid var(--border); margin: var(--spacing-lg) 0;">
+
+                <!-- Footer -->
+                <p class="text-sm text-secondary">Pour toute question: Contactez l'accueil</p>
+                <p class="text-sm text-muted">NEXTO v1.0</p>
+            </div>
+        </section>
+
+        <!-- Action Section -->
+        <section>
+            <div class="container-sm">
+                <a href="ticket.html" class="btn btn-primary btn-lg btn-block">Retour à l'Accueil</a>
+            </div>
+        </section>
+
+        <!-- Info Box -->
+        <section>
+            <div class="container-sm">
+                <div class="card" style="background-color: var(--primary-light); border-color: var(--primary);">
+                    <strong>Conseils utiles:</strong>
+                    <ul style="margin-top: var(--spacing-md); margin-left: var(--spacing-lg);">
+                        <li>Consultez l'écran d'affichage pour voir votre numéro</li>
+                        <li>Gardez votre reçu jusqu'à la fin du service</li>
+                        <li>Dirigez-vous au guichet indiqué quand votre numéro apparaît</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>À Propos</h4>
+                    <p>Nexto est une solution moderne de gestion des files d'attente</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="ticket.html">Prendre un Ticket</a></li>
+                        <li><a href="waiting-list.html">File d'Attente</a></li>
+                        <li><a href="display.html">Affichage Public</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Email: support@nexto.fr</p>
+                    <p>Support 24/7 disponible</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nexto - Système de Gestion des Files d'Attente. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get service from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const service = urlParams.get('service') || 'Service Non Spécifié';
+        
+        document.getElementById('service-name').textContent = service;
+        
+        // Generate ticket number (format: A001 - A999, or B001, etc.)
+        const ticketNum = String(Math.floor(Math.random() * 900) + 100);
+        const prefix = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+        document.getElementById('ticket-number').textContent = prefix + ticketNum;
+        
+        // Set emission time
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('emission-time').textContent = timeStr;
+    </script>
+</body>
+</html>

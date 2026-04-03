@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Affichage Public - Nexto">
+    <title>Affichage Public - Nexto</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="../index.html" class="logo">
+                    <div class="logo-icon">∴</div>
+                    <span>Nexto</span>
+                </a>
+                <nav>
+                    <a href="../index.html">Accueil</a>
+                    <a href="ticket.html">Prendre un Ticket</a>
+                    <a href="waiting-list.html">File d'Attente</a>
+                    <a href="admin.html" class="btn btn-primary btn-sm">Admin</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Écran de Suivi Public</h1>
+                    <p>Affichage clair du ticket appelé et des statistiques de file</p>
+                </div>
+            </section>
+        </section>
+
+        <!-- Main Display Area -->
+        <section style="padding: var(--spacing-2xl) 0;">
+            <div class="container">
+                <div class="display-main">
+                    <!-- Current Ticket Section (Large) -->
+                    <div class="current-ticket-section">
+                        <p class="current-ticket-label">Ticket Appelé</p>
+                        <div class="current-ticket-number" id="current-ticket">B12</div>
+                        <p style="margin-top: var(--spacing-md); font-size: 1.25rem;">GUICHET 2</p>
+                        <p class="current-ticket-counter">⏭️ Veuillez vous diriger vers votre guichet</p>
+                    </div>
+
+                    <!-- Right Sidebar -->
+                    <aside class="display-sidebar">
+                        <!-- Recently Called -->
+                        <div class="sidebar-panel">
+                            <h3>Derniers Appelés</h3>
+                            <ul class="recent-list">
+                                <li class="recent-item">
+                                    <span class="font-bold">B11</span>
+                                    <span class="text-muted">G1</span>
+                                </li>
+                                <li class="recent-item">
+                                    <span class="font-bold">B10</span>
+                                    <span class="text-muted">G2</span>
+                                </li>
+                                <li class="recent-item">
+                                    <span class="font-bold">B09</span>
+                                    <span class="text-muted">G3</span>
+                                </li>
+                                <li class="recent-item">
+                                    <span class="font-bold">B08</span>
+                                    <span class="text-muted">G4</span>
+                                </li>
+                                <li class="recent-item">
+                                    <span class="font-bold">B07</span>
+                                    <span class="text-muted">G1</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Queue Status -->
+                        <div class="sidebar-panel">
+                            <h3>État de la File</h3>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-md);">
+                                    <span>En attente:</span>
+                                    <span class="font-bold" id="waiting-count">12</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between;">
+                                    <span>Temps moyen:</span>
+                                    <span class="font-bold">15 min</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Current Time -->
+                        <div class="sidebar-panel" style="text-align: center;">
+                            <div id="current-time" class="stat-value" style="color: var(--primary);">15:45</div>
+                            <p class="text-sm text-muted">Heure Actuelle</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Navigation -->
+        <section>
+            <div class="container">
+                <h2 class="text-center">Accès Rapide</h2>
+                <div class="grid grid-4">
+                    <a href="../index.html" class="btn btn-outline btn-lg btn-block">🏠 Accueil</a>
+                    <a href="ticket.html" class="btn btn-outline btn-lg btn-block">🎫 Ticket</a>
+                    <a href="waiting-list.html" class="btn btn-outline btn-lg btn-block">📋 File</a>
+                    <a href="admin.html" class="btn btn-outline btn-lg btn-block">⚙️ Admin</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Display -->
+        <section>
+            <div class="container">
+                <h2 class="text-center">Services en Cours</h2>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <div class="service-icon">🪪</div>
+                        <h3>Carte d'Identité</h3>
+                        <p style="text-align: center; font-size: 1.5rem; color: var(--primary); font-weight: 700;">3</p>
+                        <p style="text-align: center; font-size: 0.875rem; color: var(--text-secondary);">tickets en attente</p>
+                    </div>
+                    <div class="card">
+                        <div class="service-icon">🚗</div>
+                        <h3>Permis de Conduire</h3>
+                        <p style="text-align: center; font-size: 1.5rem; color: var(--primary); font-weight: 700;">5</p>
+                        <p style="text-align: center; font-size: 0.875rem; color: var(--text-secondary);">tickets en attente</p>
+                    </div>
+                    <div class="card">
+                        <div class="service-icon">💰</div>
+                        <h3>Impôts & Taxes</h3>
+                        <p style="text-align: center; font-size: 1.5rem; color: var(--primary); font-weight: 700;">4</p>
+                        <p style="text-align: center; font-size: 0.875rem; color: var(--text-secondary);">tickets en attente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info -->
+        <section>
+            <div class="container-sm">
+                <div class="card" style="background-color: var(--primary-light); border-color: var(--primary);">
+                    <p class="text-center"><strong>ℹ️ Affichage Public:</strong> Cet écran se met à jour automatiquement toutes les 5 secondes</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>À Propos</h4>
+                    <p>Écran de suivi public en temps réel pour gestion des files d'attente</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="ticket.html">Prendre un Ticket</a></li>
+                        <li><a href="waiting-list.html">File d'Attente</a></li>
+                        <li><a href="admin.html">Admin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Email: support@nexto.fr</p>
+                    <p>Support 24/7 disponible</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nexto - Affichage Public. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+            document.getElementById('current-time').textContent = timeStr;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 60000); // Update every minute
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prendre un ticket - Nexto">
+    <title>Prendre un Ticket - Nexto</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="../index.html" class="logo">
+                    <div class="logo-icon">∴</div>
+                    <span>Nexto</span>
+                </a>
+                <nav>
+                    <a href="../index.html">Accueil</a>
+                    <a href="waiting-list.html">File d'Attente</a>
+                    <a href="display.html">Affichage Public</a>
+                    <a href="admin.html" class="btn btn-primary btn-sm">Admin</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Prise de Ticket</h1>
+                    <p>Sélectionnez votre service et générez votre numéro de ticket</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Welcome Section -->
+        <section>
+            <div class="container-sm">
+                <div class="card" style="text-align: center;">
+                    <h2>Bienvenue sur Nexto</h2>
+                    <p>Sélectionnez le service dont vous avez besoin pour générer votre ticket</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section>
+            <div class="container">
+                <h2 class="text-center">Sélectionnez votre Service</h2>
+                <div class="service-grid">
+                    <div class="service-card" onclick="selectService('Carte d\'identité / Passeport')">
+                        <div class="service-icon">🪪</div>
+                        <h3>Carte d'Identité / Passeport</h3>
+                        <p>Demandes et renouvellement</p>
+                    </div>
+                    <div class="service-card" onclick="selectService('Permis de Conduire')">
+                        <div class="service-icon">🚗</div>
+                        <h3>Permis de Conduire</h3>
+                        <p>Demandes et renouvellement</p>
+                    </div>
+                    <div class="service-card" onclick="selectService('Certificat de Résidence')">
+                        <div class="service-icon">🏠</div>
+                        <h3>Certificat de Résidence</h3>
+                        <p>Justificatif de domicile</p>
+                    </div>
+                    <div class="service-card" onclick="selectService('Impôts & Taxes')">
+                        <div class="service-icon">💰</div>
+                        <h3>Impôts & Taxes</h3>
+                        <p>Déclaration et paiement</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Service Display -->
+        <section id="selected-section" style="display: none;">
+            <div class="container-sm">
+                <div class="card">
+                    <p class="text-muted text-sm uppercase">Service Sélectionné</p>
+                    <h2 id="selected-service-name" style="color: var(--primary); margin-bottom: var(--spacing-lg);">—</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Take Ticket Section -->
+        <section id="ticket-action-section" style="display: none;">
+            <div class="container-sm">
+                <div class="card">
+                    <h2 class="text-center">Générer votre Ticket</h2>
+                    <button id="take-ticket-btn" class="btn btn-primary btn-lg btn-block" onclick="takeTicket()">
+                        PRENDRE UN TICKET
+                    </button>
+                    <p class="text-center mt" style="color: var(--success);">✓ Cliquez pour générer votre ticket</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Access -->
+        <section>
+            <div class="container">
+                <h2 class="text-center">Accès Rapide</h2>
+                <div class="grid grid-2">
+                    <a href="waiting-list.html" class="btn btn-outline btn-lg btn-block">📋 Voir la File d'Attente</a>
+                    <a href="display.html" class="btn btn-outline btn-lg btn-block">📡 Écran d'Affichage</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Box -->
+        <section>
+            <div class="container-sm">
+                <div class="card" style="background-color: var(--primary-light); border-color: var(--primary);">
+                    <p class="text-center"><strong>ℹ️ Information:</strong> Veuillez patienter après avoir pris votre ticket. Consultez l'affichage public pour suivre votre numéro.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>À Propos</h4>
+                    <p>Nexto est une solution moderne de gestion des files d'attente pour administrations</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="ticket.html">Prendre un Ticket</a></li>
+                        <li><a href="waiting-list.html">File d'Attente</a></li>
+                        <li><a href="display.html">Affichage Public</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Email: support@nexto.fr</p>
+                    <p>Support 24/7 disponible</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nexto - Système de Gestion des Files d'Attente. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function selectService(serviceName) {
+            document.getElementById('selected-service-name').textContent = serviceName;
+            document.getElementById('selected-section').style.display = 'block';
+            document.getElementById('ticket-action-section').style.display = 'block';
+            document.getElementById('take-ticket-btn').setAttribute('data-service', serviceName);
+            window.scrollTo({ top: document.getElementById('selected-section').offsetTop - 100, behavior: 'smooth' });
+        }
+
+        function takeTicket() {
+            const service = document.getElementById('take-ticket-btn').getAttribute('data-service');
+            if (service) {
+                // Redirect to confirmation page
+                window.location.href = `ticket-generated.html?service=${encodeURIComponent(service)}`;
+            }
+        }
+    </script>
+</body>
+</html>

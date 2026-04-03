@@ -1,0 +1,12 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Desk/Guichet -->
+    <rect x="50" y="150" width="200" height="80" fill="#2563eb" rx="10"/>
+    <rect x="60" y="140" width="180" height="20" fill="#1e40af" rx="5"/>
+    <!-- Queue -->
+    <circle cx="80" cy="100" r="15" fill="#22c55e"/>
+    <circle cx="130" cy="90" r="15" fill="#f59e0b"/>
+    <circle cx="180" cy="100" r="15" fill="#ef4444"/>
+    <!-- Ticket display -->
+    <rect x="120" y="50" width="60" height="30" fill="#e2e8f0" stroke="#2563eb" stroke-width="2" rx="3"/>
+    <text x="150" y="70" font-size="16" font-weight="bold" text-anchor="middle" fill="#2563eb">B12</text>
+</svg>
