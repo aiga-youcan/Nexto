@@ -86,7 +86,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: bold;
     color: var(--text-primary);
 }
 
@@ -481,79 +481,8 @@ tbody tr:hover {
     background-color: var(--bg-tertiary);
 }
 
-/* ========================================
-   10. FORMS
-   ======================================== */
 
-.form-group {
-    margin-bottom: var(--spacing-lg);
-}
 
-label {
-    display: block;
-    margin-bottom: var(--spacing-sm);
-    font-weight: 600;
-    color: var(--text-primary);
-    font-size: 0.95rem;
-}
-
-input,
-textarea,
-select {
-    width: 100%;
-    padding: var(--spacing-md);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    font-family: inherit;
-    font-size: 1rem;
-    transition: var(--transition);
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px var(--primary-light);
-}
-
-/* ========================================
-   11. LAYOUT UTILITIES
-   ======================================== */
-
-/* Flexbox */
-.flex {
-    display: flex;
-}
-
-.flex-col {
-    flex-direction: column;
-}
-
-.flex-center {
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-between {
-    justify-content: space-between;
-    align-items: center;
-}
-
-.flex-around {
-    justify-content: space-around;
-    align-items: center;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
-}
-
-.gap-xs { gap: var(--spacing-xs); }
-.gap-sm { gap: var(--spacing-sm); }
-.gap-md { gap: var(--spacing-md); }
-.gap-lg { gap: var(--spacing-lg); }
-.gap-xl { gap: var(--spacing-xl); }
 
 /* Grid */
 .grid {
@@ -573,17 +502,6 @@ select:focus {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-/* Spacing */
-.mt { margin-top: var(--spacing-md); }
-.mb { margin-bottom: var(--spacing-md); }
-.my { margin: var(--spacing-md) 0; }
-.mx { margin: 0 var(--spacing-md); }
-
-.p { padding: var(--spacing-md); }
-.pt { padding-top: var(--spacing-md); }
-.pb { padding-bottom: var(--spacing-md); }
-.py { padding: var(--spacing-md) 0; }
-.px { padding: 0 var(--spacing-md); }
 
 /* Text */
 .text-center { text-align: center; }
@@ -642,6 +560,21 @@ select:focus {
     justify-content: center;
 }
 
+.hero-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-3xl);
+}
+
+.hero-illustration svg {
+    width: 550px;
+    height: auto;
+}
+
+
+
+
 /* ========================================
    13. STATUS BADGES
    ======================================== */
@@ -676,65 +609,47 @@ select:focus {
     color: var(--danger);
 }
 
-/* ========================================
-   14. PAGE-SPECIFIC STYLES
-   ======================================== */
-
-/* Waiting List */
-.ticket-item {
-    padding: var(--spacing-lg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    margin-bottom: var(--spacing-md);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: var(--transition);
-}
-
-.ticket-item.active {
-    background-color: var(--primary-light);
-    border-color: var(--primary);
-    font-weight: 600;
-}
-
-.ticket-number {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary);
-}
-
-.ticket-time {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
 
 /* Admin Panel */
+
+.admin-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.admin-actions .btn {
+    width: auto; /* Bach tlghi l'effet dyal btn-block */
+    flex: 1; /* Bach ijiw b 3 9ed 9ed f l'kber */
+    min-width: 200px; /* Bach mayweliwch sghar bzaf f tilyfoune */
+}
+
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-2xl);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
 }
 
 .stat-card {
     background: var(--primary-light);
     border: 1px solid var(--primary);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
     text-align: center;
 }
 
 .stat-label {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
 }
 
 .stat-value {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--primary);
 }
@@ -742,23 +657,23 @@ select:focus {
 /* Ticket Display */
 .ticket-display {
     background: white;
-    border: 3px solid var(--primary);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-2xl);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xl);
     text-align: center;
-    max-width: 500px;
-    margin: var(--spacing-3xl) auto;
+    max-width: 400px;
+    margin: var(--spacing-xl) auto;
 }
 
 .ticket-display-number {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 900;
     color: var(--primary);
-    margin: var(--spacing-lg) 0;
+    margin: var(--spacing-md) 0;
 }
 
 .ticket-display-label {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--text-secondary);
@@ -780,6 +695,9 @@ select:focus {
     cursor: pointer;
     transition: var(--transition);
     background: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
@@ -802,7 +720,9 @@ select:focus {
 .service-card p {
     font-size: 0.875rem;
     color: var(--text-secondary);
+    flex-grow: 1;
 }
+
 
 /* Display Page */
 .display-main {
@@ -974,3 +894,140 @@ select:focus {
         padding: var(--spacing-sm);
     }
 }
+
+/* ========================================
+   11. PAGES INTERNES (Ticket, Admin, etc.)
+   ======================================== */
+.page-interne main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: var(--spacing-lg);
+}
+
+.page-interne section {
+    padding: var(--spacing-md) 0;
+}
+
+.page-interne .card {
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.page-interne h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-interne .service-card {
+    min-height: 180px;
+    justify-content: center;
+}
+
+.ticket-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.ticket-display {
+    background: white;
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-lg);
+    overflow: hidden; /* Bach l-header iji m9add */
+    box-shadow: var(--shadow-lg);
+}
+
+.ticket-header {
+    background-color: var(--primary-light);
+    padding: var(--spacing-md);
+    text-align: center;
+    border-bottom: 1px dashed var(--primary);
+}
+
+.check-icon {
+    font-size: 2rem;
+    color: var(--success);
+    line-height: 1;
+}
+
+.status-text {
+    color: var(--success);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-top: var(--spacing-xs);
+}
+
+.ticket-body {
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+.ticket-display-number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin: var(--spacing-sm) 0;
+    line-height: 1;
+}
+
+.ticket-info {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.9rem;
+}
+
+.wait-message {
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.ticket-actions {
+    text-align: center; /* Bach i-ji l-bouton f l-west */
+    margin-top: var(--spacing-md);
+}
+
+.ticket-actions .btn {
+    width: auto; /* Bach may-b9ach chaded l-line kamel */
+    min-width: 200px; /* Bach may-jich sghir bzaf t-79rou */
+    padding: var(--spacing-sm) var(--spacing-xl); /* N-9addo l-misaha dyalo */
+    margin: 0 auto;
+}
+
+
+
+/* --- Bouton Actualiser Pro --- */
+.btn-refresh {
+    background-color: #f0f7ff; /* Lon l-khlefia bared */
+    color: #3b82f6;           /* Lon l-blue dyal l-ktaba */
+    border: 1.5px solid #3b82f6;
+    padding: 10px 30px;        /* Sgherna l-bouton */
+    width: auto;               /* Mab9atch chada l-ecran kamel */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: none;      /* 7eyedna uppercase bach t-ban modern */
+    border-radius: var(--radius-md);
+}
+
+.btn-refresh:hover {
+    background-color: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+

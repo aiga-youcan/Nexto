@@ -8,7 +8,7 @@
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="page-interne"></body>
     <!-- Header/Navbar -->
     <header>
         <div class="container">
@@ -18,26 +18,14 @@
                     <span>Nexto</span>
                 </a>
                 <nav>
-                    <a href="../index.html">Accueil</a>
-                    <a href="ticket.html">Prendre un Ticket</a>
-                    <a href="waiting-list.html">File d'Attente</a>
-                    <a href="display.html">Affichage Public</a>
+                    <a href="../pages/admin.html">Admin Panel</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Panneau d'Administration</h1>
-                    <p>Gestion de la file d'attente et des tickets de manière fluide et moderne</p>
-                </div>
-            </div>
-        </section>
-
+<div class="container sections-paralleles"></div>
         <!-- Current Information -->
         <section>
             <div class="container">
@@ -45,15 +33,15 @@
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-label">Numéro Actuel</div>
-                        <div class="stat-value">A042</div>
+                        <div class="stat-value">B12</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-label">Guichet</div>
-                        <div class="stat-value">03</div>
+                        <div class="stat-value">02</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-label">En Attente</div>
-                        <div class="stat-value">8</div>
+                        <div class="stat-value">2</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-label">Temps Moyen</div>
@@ -67,7 +55,7 @@
         <section>
             <div class="container-sm">
                 <h2 class="text-center">Actions Administrateur</h2>
-                <div class="grid">
+                <div class="admin-actions">
                     <button class="btn btn-primary btn-lg btn-block">➜ Appeler Suivant</button>
                     <button class="btn btn-danger btn-lg btn-block">✖ Annuler Ticket</button>
                     <button class="btn btn-secondary btn-lg btn-block">⟳ Réinitialiser</button>
@@ -75,67 +63,33 @@
             </div>
         </section>
 
-        <!-- Queue Preview -->
+        <!-- Queue Table -->
         <section>
             <div class="container">
-                <h2 class="text-center">File d'Attente - Vue d'Ensemble</h2>
+                <h2 class="text-center">Liste -tickets en attente</h2>
                 <div style="overflow-x: auto;">
                     <table>
                         <thead>
                             <tr>
                                 <th>Numéro</th>
                                 <th>Service</th>
-                                <th>Temps d'Attente</th>
                                 <th>Statut</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr style="background-color: var(--primary-light);">
-                                <td class="font-bold" style="color: var(--primary);">A043</td>
-                                <td>Permis de Conduire</td>
-                                <td>12 min</td>
-                                <td><span class="badge badge-primary">En attente</span></td>
-                            </tr>
                             <tr>
-                                <td class="font-bold">A044</td>
-                                <td>Certificat de Résidence</td>
-                                <td>18 min</td>
-                                <td><span class="badge badge-warning">En attente</span></td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold">A045</td>
-                                <td>Impôts & Taxes</td>
-                                <td>24 min</td>
-                                <td><span class="badge badge-warning">En attente</span></td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold">A046</td>
+                                <td class="font-bold" style="color: var(--primary);">B12</td>
                                 <td>Carte d'Identité</td>
-                                <td>30 min</td>
-                                <td><span class="badge badge-warning">En attente</span></td>
+                                <td><span class="badge badge-primary">En cours</span></td>
                             </tr>
                             <tr>
-                                <td class="font-bold">A047</td>
+                                <td class="font-bold">B13</td>
                                 <td>Permis de Conduire</td>
-                                <td>36 min</td>
                                 <td><span class="badge badge-warning">En attente</span></td>
                             </tr>
                             <tr>
-                                <td class="font-bold">A048</td>
-                                <td>Certificat de Résidence</td>
-                                <td>42 min</td>
-                                <td><span class="badge badge-warning">En attente</span></td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold">A049</td>
+                                <td class="font-bold">B14</td>
                                 <td>Impôts & Taxes</td>
-                                <td>48 min</td>
-                                <td><span class="badge badge-warning">En attente</span></td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold">A050</td>
-                                <td>Carte d'Identité</td>
-                                <td>54 min</td>
                                 <td><span class="badge badge-warning">En attente</span></td>
                             </tr>
                         </tbody>
@@ -161,37 +115,30 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="font-bold">A041</td>
+                                <td class="font-bold">B11</td>
                                 <td>Carte d'Identité</td>
                                 <td>14:32</td>
-                                <td>03</td>
+                                <td>02</td>
                                 <td><span class="badge badge-success">Terminé</span></td>
                             </tr>
                             <tr>
-                                <td class="font-bold">A040</td>
+                                <td class="font-bold">B10</td>
                                 <td>Impôts & Taxes</td>
                                 <td>14:28</td>
                                 <td>02</td>
                                 <td><span class="badge badge-success">Terminé</span></td>
                             </tr>
                             <tr>
-                                <td class="font-bold">A039</td>
+                                <td class="font-bold">B09</td>
                                 <td>Permis de Conduire</td>
-                                <td>14:25</td>
-                                <td>01</td>
+                                <td>14:28</td>
+                                <td>02</td>
                                 <td><span class="badge badge-success">Terminé</span></td>
                             </tr>
                             <tr>
-                                <td class="font-bold">A038</td>
-                                <td>Certificat de Résidence</td>
-                                <td>14:20</td>
-                                <td>03</td>
-                                <td><span class="badge badge-success">Terminé</span></td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold">A037</td>
-                                <td>Carte d'Identité</td>
-                                <td>14:15</td>
+                                <td class="font-bold">B08</td>
+                                <td>Impôts & Taxes</td>
+                                <td>14:28</td>
                                 <td>02</td>
                                 <td><span class="badge badge-success">Terminé</span></td>
                             </tr>
@@ -203,32 +150,5 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>À Propos</h4>
-                    <p>Nexto est une solution moderne de gestion des files d'attente</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="../index.html">Accueil</a></li>
-                        <li><a href="ticket.html">Prendre un Ticket</a></li>
-                        <li><a href="waiting-list.html">File d'Attente</a></li>
-                        <li><a href="display.html">Affichage Public</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
-                    <p>Email: support@nexto.fr</p>
-                    <p>Support technique 24/7</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Nexto - Système de Gestion des Files d'Attente. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>

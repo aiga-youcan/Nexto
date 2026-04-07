@@ -6,10 +6,9 @@
     <meta name="description" content="Nexto - Système moderne de gestion des files d'attente pour administrations">
     <title>Nexto - Gestion des Files d'Attente</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 </head>
 <body>
-    <!-- Header/Navbar -->
     <header>
         <div class="container">
             <div class="header-inner">
@@ -18,55 +17,72 @@
                     <span>Nexto</span>
                 </a>
                 <nav>
+                    <a href="#acc">Accueil</a>
                     <a href="#features">Fonctionnalités</a>
                     <a href="#how-it-works">Comment ça marche</a>
                     <a href="#benefits">Avantages</a>
-                    <a href="pages/ticket.html" class="btn btn-primary btn-sm">Prendre un Ticket</a>
+                    <a href="#contact">Contact</a>
+                    <a href="pages/ticket.html" class="btn btn-primary btn-sm">Commencer</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
+        <section id="acc" class="hero">
             <div class="container">
-                <div class="hero-content">
-                    <h1>Simplifiez la gestion des files d'attente</h1>
-                    <p>Une solution moderne et ergonomique pour optimiser les services administratifs et améliorer l'expérience des usagers</p>
-                    <div class="hero-buttons">
-                        <a href="pages/ticket.html" class="btn btn-primary btn-lg">Prendre un Ticket</a>
-                        <a href="#features" class="btn btn-outline btn-lg">En Savoir Plus</a>
+                <div class="hero-layout">
+                    <div class="hero-content">
+                        <h1>Simplifiez la gestion des files d'attente</h1>
+                        <p>Une solution moderne et ergonomique pour optimiser les services administratifs et améliorer l'expérience des usagers</p>
+                        <div class="hero-buttons">
+                            <a href="pages/ticket.html" class="btn btn-primary btn-lg">Prendre un Ticket</a>
+                            <a href="#features" class="btn btn-outline btn-lg">Voir la démo</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-illustration">
+                        <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="60" y="60" width="300" height="180" rx="12" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                            <rect x="150" y="110" width="120" height="70" rx="8" fill="white" stroke="#94a3b8" stroke-width="2"/>
+                            <text x="210" y="150" text-anchor="middle" font-size="12" fill="#64748b">Guichet</text>
+                            <circle cx="120" cy="210" r="12" fill="#0ea5e9"/>
+                            <rect x="112" y="222" width="16" height="25" fill="#0ea5e9"/>
+                            <circle cx="170" cy="210" r="12" fill="#22c55e"/>
+                            <rect x="162" y="222" width="16" height="25" fill="#22c55e"/>
+                            <circle cx="220" cy="210" r="12" fill="#f59e0b"/>
+                            <rect x="212" y="222" width="16" height="25" fill="#f59e0b"/>
+                            <rect x="300" y="180" width="40" height="60" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+                            <rect x="308" y="190" width="24" height="12" rx="3" fill="#0ea5e9"/>
+                        </svg>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Features Section -->
         <section id="features">
             <div class="container">
-                <h2 class="text-center">Fonctionnalités clés</h2>
+                <h2 class="text-center">Fonctionnalités</h2>
                 <div class="grid grid-3">
                     <div class="card">
                         <div class="service-icon">🎟️</div>
-                        <h3>Prise Rapide de Ticket</h3>
-                        <p>Interface intuitive pour générer un numéro de ticket en quelques secondes</p>
+                        <h3>Prise rapide de ticket</h3>
+                        <p>Les usagers obtiennent leur numéro en quelques secondes grâce à une interface simple et intuitive.</p>
                     </div>
                     <div class="card">
-                        <div class="service-icon">📊</div>
-                        <h3>Affichage Temps Réel</h3>
-                        <p>Écran public affichant le ticket appelé et la file d'attente en continu</p>
+                        <div class="service-icon">📺</div>
+                        <h3>Affichage en temps réel</h3>
+                        <p>L'écran public affiche le ticket appelé et l'ordre de passage pour une meilleure organisation.</p>
                     </div>
                     <div class="card">
-                        <div class="service-icon">⚙️</div>
-                        <h3>Gestion Simplifiée</h3>
-                        <p>Système facile à utiliser pour le personnel permettant de gérer les appels efficacement</p>
+                        <div class="service-icon">👨‍💼</div>
+                        <h3>Gestion facile pour le personnel</h3>
+                        <p>Le personnel peut appeler les tickets rapidement et gérer la file d'attente sans complexité.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- How It Works Section -->
         <section id="how-it-works">
             <div class="container">
                 <h2 class="text-center">Comment ça marche</h2>
@@ -90,7 +106,6 @@
             </div>
         </section>
 
-        <!-- Benefits Section -->
         <section id="benefits">
             <div class="container">
                 <h2 class="text-center">Avantages de Nexto</h2>
@@ -110,35 +125,19 @@
                         <h3>Meilleure Expérience</h3>
                         <p>Offrez un service plus rapide et plus confortable, améliorant la satisfaction globale des clients.</p>
                     </div>
-                    <div class="card">
-                        <div class="service-icon">📈</div>
-                        <h3>Productivité Accrue</h3>
-                        <p>Les agents gèrent mieux le flux de travail et réduisent les temps d'attente moyens.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section>
-            <div class="container">
-                <div class="text-center">
-                    <h2>Prêt à commencer ?</h2>
-                    <p style="font-size: 1.125rem; margin-bottom: var(--spacing-2xl);">Simplifiez dès maintenant la gestion des files d'attente de votre administration</p>
-                    <a href="pages/ticket.html" class="btn btn-primary btn-lg">Démarrer Maintenant</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>À Propos</h4>
+                    <h3 class="logo">Nexto</h3>
                     <p>Nexto est une solution moderne de gestion des files d'attente conçue pour les administrations et services publics.</p>
                 </div>
+
                 <div class="footer-section">
                     <h4>Navigation</h4>
                     <ul>
@@ -148,25 +147,19 @@
                         <li><a href="pages/display.html">Affichage Public</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Support</h4>
+
+                <div id="contact" class="footer-section">
+                    <h4>Contact</h4>
                     <ul>
                         <li>Email: support@nexto.fr</li>
                         <li>Tél: +33 1 23 45 67 89</li>
                         <li>Support 24/7 disponible</li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Légal</h4>
-                    <ul>
-                        <li><a href="#">Politique de Confidentialité</a></li>
-                        <li><a href="#">Conditions d'Utilisation</a></li>
-                        <li><a href="#">Mentions Légales</a></li>
-                    </ul>
-                </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2024 Nexto - Système de Gestion des Files d'Attente. Tous droits réservés.</p>
+                <p>&copy; 2026 Nexto - Système de Gestion des Files d'Attente. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
